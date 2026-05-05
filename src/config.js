@@ -6,6 +6,7 @@ export const ASSETS = {
   exclamation: '/__-removebg-preview.png',
   folder: '/folder.png',
   googleEyes: '/google eyes.png',
+  heroPrint: '/img.jpg',
   petal: '/z_v0-Q8Y-removebg-preview.png',
   photoStrip: '/polaroid-picture.png',
   sunflower: '/Sunflower_flower_png_isolated_on_transparent_background___Premium_AI-generated_PSD-removebg-preview.png',

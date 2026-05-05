@@ -85,6 +85,16 @@ export const TWENTY_ONE_REASONS = [
   'Because 21 years of Kai is worth celebrating loudly.',
 ]
 
+export const REASON_MEDIA = TWENTY_ONE_REASONS.map((_, index) => {
+  const number = index + 1
+
+  if (number === 4 || number === 9) {
+    return { type: 'video', src: `/vid${number}` }
+  }
+
+  return { type: 'image', src: `/img${number}` }
+})
+
 export const LETTER_CONTENT = {
   title: 'A letter tucked inside the folder',
   message: [

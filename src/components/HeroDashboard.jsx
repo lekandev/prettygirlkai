@@ -16,12 +16,6 @@ function DossierTable() {
           </div>
         ))}
       </div>
-
-      <img
-        src={ASSETS.photoStrip}
-        alt=""
-        className="absolute -right-5 top-20 hidden w-44 rotate-[8deg] drop-shadow-cutout md:block lg:-right-10 lg:w-56"
-      />
       <img
         src={ASSETS.googleEyes}
         alt=""
@@ -136,11 +130,6 @@ export default function HeroDashboard() {
               src={ASSETS.envelope}
               alt=""
               className="absolute left-2 top-24 w-[94%] rotate-[-7deg] drop-shadow-cutout"
-            />
-            <img
-              src={ASSETS.photoStrip}
-              alt=""
-              className="absolute left-[29%] top-10 z-10 w-[42%] rotate-[10deg] drop-shadow-cutout"
             />
             <img
               src={ASSETS.camera}

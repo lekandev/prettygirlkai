@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react'
 import p5 from 'p5'
 
 const palette = {
-  rust: [125, 23, 24],
-  blush: [255, 95, 156],
-  coral: [255, 132, 104],
-  gold: [255, 224, 70],
-  butter: [255, 245, 136],
-  sage: [125, 184, 96],
-  cream: [255, 252, 245],
+  rust: [184, 34, 56],
+  blush: [255, 72, 146],
+  coral: [255, 118, 72],
+  gold: [255, 230, 36],
+  butter: [255, 247, 110],
+  sage: [104, 198, 76],
+  cream: [255, 253, 240],
 }
 
 function randomChoice(p, values) {
@@ -35,7 +35,7 @@ export default function FlowerField() {
         petals.push({
           x: x + p.random(-8, 8),
           y: y + p.random(-8, 8),
-          size: p.random(10, 18),
+          size: p.random(12, 22),
           vx: p.random(-0.45, 0.45),
           vy: p.random(-0.8, -0.2),
           drift: p.random(0.006, 0.018),
@@ -52,7 +52,7 @@ export default function FlowerField() {
           y,
           age: 0,
           maxAge: 110,
-          size: p.random(26, 52),
+          size: p.random(32, 62),
           petals: Math.floor(p.random(6, 9)),
           rotation: p.random(-0.4, 0.4),
           color: randomChoice(p, [palette.blush, palette.coral, palette.gold, palette.butter]),
@@ -114,8 +114,8 @@ export default function FlowerField() {
           drawPetal(
             p.cos(angle) * radius * 0.48,
             p.sin(angle) * radius * 0.48,
-            radius * 0.82,
-            radius * 0.42,
+            radius * 0.94,
+            radius * 0.48,
             angle,
             blossom.color,
             245 * alpha

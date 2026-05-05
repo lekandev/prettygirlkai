@@ -6,6 +6,7 @@ export const ASSETS = {
   exclamation: '/__-removebg-preview.png',
   folder: '/folder.png',
   googleEyes: '/google eyes.png',
+  heroPrint: '/img.jpg',
   petal: '/z_v0-Q8Y-removebg-preview.png',
   photoStrip: '/polaroid-picture.png',
   sunflower: '/Sunflower_flower_png_isolated_on_transparent_background___Premium_AI-generated_PSD-removebg-preview.png',
@@ -84,6 +85,16 @@ export const TWENTY_ONE_REASONS = [
   'You are the plot twist and the happy ending.',
   'Because 21 years of Kai is worth celebrating loudly.',
 ]
+
+export const REASON_MEDIA = TWENTY_ONE_REASONS.map((_, index) => {
+  const number = index + 1
+
+  if (number === 4 || number === 9) {
+    return { type: 'video', src: `/vid${number}` }
+  }
+
+  return { type: 'image', src: `/img${number}` }
+})
 
 export const LETTER_CONTENT = {
   title: 'A letter tucked inside the folder',

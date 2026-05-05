@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ASSETS, DOSSIER_ROWS, HERO_NOTES, MEMORY_FILES, SITE_COPY } from '../config'
 
 function DossierTable() {
@@ -16,12 +17,6 @@ function DossierTable() {
           </div>
         ))}
       </div>
-
-      <img
-        src={ASSETS.photoStrip}
-        alt=""
-        className="absolute -right-5 top-20 hidden w-44 rotate-[8deg] drop-shadow-cutout md:block lg:-right-10 lg:w-56"
-      />
       <img
         src={ASSETS.googleEyes}
         alt=""
@@ -83,6 +78,8 @@ function MemoryFolder() {
 }
 
 export default function HeroDashboard() {
+  const [isHeroNoteOpen, setIsHeroNoteOpen] = useState(false)
+
   return (
     <>
       <section id="home" className="relative z-10 min-h-screen px-5 pb-20 pt-28 sm:px-8">
@@ -137,11 +134,13 @@ export default function HeroDashboard() {
               alt=""
               className="absolute left-2 top-24 w-[94%] rotate-[-7deg] drop-shadow-cutout"
             />
-            <img
-              src={ASSETS.photoStrip}
-              alt=""
-              className="absolute left-[29%] top-10 z-10 w-[42%] rotate-[10deg] drop-shadow-cutout"
-            />
+            <div className="absolute left-[24%] top-[42%] z-10 w-[44%] rotate-[4deg] border border-ink bg-paper p-3 shadow-paper">
+              <img
+                src={ASSETS.heroPrint}
+                alt="Kai"
+                className="aspect-[4/5] w-full border border-ink/25 object-cover"
+              />
+            </div>
             <img
               src={ASSETS.camera}
               alt=""
@@ -160,6 +159,42 @@ export default function HeroDashboard() {
             <div className="absolute bottom-[7%] right-[3%] z-30 max-w-[220px] border border-ink bg-cream p-4 shadow-paper">
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-rust">found note</p>
               <p className="mt-2 font-script text-4xl leading-8 text-blueInk">today is yours</p>
+            </div>
+            <div className="absolute bottom-[30%] right-[4%] z-40">
+              <AnimatePresence mode="wait">
+                {isHeroNoteOpen ? (
+                  <motion.div
+                    key="open-note"
+                    className="w-56 rotate-[4deg] border border-ink bg-paper p-4 shadow-paper sm:w-64"
+                    initial={{ scale: 0.85, opacity: 0, rotate: -5 }}
+                    animate={{ scale: 1, opacity: 1, rotate: 4 }}
+                    exit={{ scale: 0.85, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 180, damping: 16 }}
+                    aria-label="Hidden sweet note"
+                  >
+                    <div className="border border-ink/25 bg-cream/75 p-4">
+                      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-rust">
+                        tiny secret
+                      </p>
+                      <p className="mt-3 font-script text-4xl leading-8 text-blueInk">
+                        you make every little thing feel sweeter.
+                      </p>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.button
+                    key="closed-note"
+                    type="button"
+                    onClick={() => setIsHeroNoteOpen(true)}
+                    className="rotate-[5deg] border border-ink bg-blush px-3 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-rust shadow-paper transition hover:-translate-y-0.5 hover:bg-cream"
+                    initial={{ scale: 0.92, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.92, opacity: 0 }}
+                  >
+                    click me
+                  </motion.button>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
         </div>

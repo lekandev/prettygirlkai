@@ -40,13 +40,13 @@ function MemoryFolder() {
           </p>
         </div>
 
-        <div className="relative min-h-[620px]">
+        <div className="relative min-h-[500px] sm:min-h-[620px]">
           <img
             src={ASSETS.folder}
             alt=""
             className="absolute inset-x-0 top-2 mx-auto w-[min(760px,100%)] rotate-[2deg] drop-shadow-cutout"
           />
-          <div className="relative mx-auto max-w-[520px] pt-24">
+          <div className="relative mx-auto max-w-sm sm:max-w-[520px] pt-12 sm:pt-24">
             {MEMORY_FILES.map((file, index) => (
               <motion.article
                 key={file.id}
@@ -69,7 +69,7 @@ function MemoryFolder() {
           <img
             src={ASSETS.sunflower}
             alt=""
-            className="absolute bottom-4 right-8 w-28 rotate-[18deg] drop-shadow-cutout"
+            className="absolute bottom-4 right-2 sm:right-8 w-20 sm:w-28 rotate-[18deg] drop-shadow-cutout hidden sm:block"
           />
         </div>
       </div>

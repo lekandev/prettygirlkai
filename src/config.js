@@ -99,7 +99,7 @@ export const TWENTY_ONE_REASONS = [
 ]
 
 export const REASON_MEDIA = [
-  { type: 'image', src: '/img1.jpg' },
+  { type: 'image', src: '/img1.jpeg' },
   { type: 'image', src: '/img2.png' },
   { type: 'image', src: '/img3.jpg' },
   { type: 'video', src: '/vid 4.mp4' },

@@ -93,7 +93,7 @@ export const TWENTY_ONE_REASONS = [
   'No words Kaima, No words. You took this picture yourself, good thing you know lmaooo.',
   'You have the most amazing bum bum baby, it is so big and comfy and here is me resting my head on it. Honestly, therapeutic. It takes away my worries.',
   'You have been through so much in your life kaima and it is incredible seeing you grow and mature into a woman. I am so proud of you, I am proud of the woman you are becoming Kaima.',
-  'Chukwukaima Ezebuenyi Daniella, your parents are solucky to have you, you are an amazing daughter and sister.',
+  'Chukwukaima Ezebuenyi Daniella, your parents are so lucky to have you, you are an amazing daughter and sister.',
   'It is okay to feel old at 21, but with every year that has passed you have only gotten more beautiful, this is you now; hotter, wiser, cuntier, better. And I am sure that you are going to be alright. You got this Kaima.',
   'I am grateful every day that you were born, and that I got to be a huge part of some of your life(I hope i still remain future-wise) You taught me how to love myself, you loved me Kaima, you really loved me and I am eternally grateful. I love you so much Kaima.You are the best.',
 ]
